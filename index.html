@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>manuels-anciens.com – Nos 2 700 manuels scolaires sont menacés</title>
+<meta name="description" content="Une taxe au gigaoctet votée à l’Assemblée nationale pourrait menacer l’existence de notre bibliothèque gratuite de manuels scolaires.">
+<style>
+:root{--bg:#000;--fg:#f2efe8;--muted:#a9a59b;--accent:#f5c542;--line:#2b2b2b;--panel:#111}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.banner{background:#fff;border-bottom:4px solid var(--accent)}
+.banner img{display:block;width:100%;max-width:1100px;margin:0 auto;height:auto}
+main{max-width:720px;margin:0 auto;padding:56px 22px 72px}
+h1{font:700 clamp(2rem,6vw,3.4rem)/1.1 "Iowan Old Style",Georgia,serif;margin:0 0 20px;letter-spacing:-.01em}
+h2{font:700 1.45rem/1.25 "Iowan Old Style",Georgia,serif;margin:56px 0 14px}
+p{margin:0 0 16px}
+.lead{font-size:1.2rem;color:var(--fg)}
+.count{display:flex;align-items:baseline;gap:14px;margin:34px 0 8px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.count strong{font:700 clamp(3rem,12vw,5.5rem)/1 "Iowan Old Style",Georgia,serif;color:var(--accent)}
+.count span{color:var(--muted)}
+ul{padding-left:1.2em;margin:0 0 16px}
+li{margin-bottom:8px}
+.facts{background:var(--panel);border-left:4px solid var(--accent);padding:18px 22px;margin:20px 0}
+.facts p:last-child{margin:0}
+.calc{background:var(--panel);border:1px solid var(--line);padding:22px;margin:20px 0}
+.calc .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:.9rem;color:var(--muted);margin-bottom:6px}
+input{width:100%;font:inherit;color:var(--fg);background:#000;border:1px solid #555;padding:10px 12px;border-radius:4px}
+input:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.result{margin-top:18px;font-size:1.1rem}
+.result b{font-size:1.9rem;color:var(--accent);font-family:"Iowan Old Style",Georgia,serif}
+small{color:var(--muted);display:block;margin-top:10px;font-size:.88rem;line-height:1.5}
+a{color:var(--accent)}
+footer{border-top:1px solid var(--line);margin-top:56px;padding-top:22px;color:var(--muted);font-size:.9rem}
+@media(max-width:520px){.calc .row{grid-template-columns:1fr}.count{flex-direction:column;gap:0}}
+</style>
+</head>
+<body>
+<div class="banner"><img src="logo-banner.webp" alt="Mémoire de l’école algérienne – archives des documents du système éducatif algérien, arabe et étranger"></div>
+
+<main>
+<h1>Nos manuels scolaires pourraient disparaître d’internet.</h1>
+<p class="lead">manuels-anciens.com est une bibliothèque gratuite de manuels scolaires anciens. Une taxe au gigaoctet, récemment votée à l’Assemblée nationale, pourrait nous mettre dans l’impossibilité de continuer.</p>
+
+<div class="count"><strong>2700+</strong><span>manuels scolaires, accessibles gratuitement à tous</span></div>
+
+<h2>Qui sommes-nous</h2>
+<p>Nous sommes une petite équipe de développeurs. Le site est gratuit, sans publicité ni abonnement. Nous n’avons aucun revenu, et nous financons l’hébergement par nos propres moyens.</p>
+
+<h2>Ce qui a été voté</h2>
+<div class="facts">
+<p>Le 30 octobre 2026, l’Assemblée nationale a adopté un amendement au projet de loi de finances pour 2027. Il crée une taxe de <strong>0,055 € (5,5 centimes) par gigaoctet</strong> de données envoyé aux internautes français. Elle serait due par l’entreprise ou le site qui envoie les données.</p>
+<p>Le texte prévoit un plafonnement lié au chiffre d’affaires, et renvoie les modalités à un décret.</p>
+</div>
+<p><strong>Ce n’est pas encore une loi en vigueur.</strong> Le budget doit poursuivre son parcours parlementaire, notamment au Sénat. Le texte peut encore être modifié ou supprimé.</p>
+
+<h2>Pourquoi c’est un problème pour nous</h2>
+<p>Notre site fonctionne en envoyant des fichiers : chaque manuel téléchargé est un transfert de données. Plus la bibliothèque est utilisée, plus le volume augmente. Un site gratuit n’a aucun revenu pour compenser une taxe calculée sur ce volume.</p>
+<p>Nous ne savons pas encore si, ni comment, les petits sites sans revenus seraient concernés. Ces précisions n’existent pas dans le texte voté. Si nous devions payer, nous devrions limiter ou fermer l’accès aux manuels.</p>
+
+<h2>Estimez par vous-même</h2>
+<p>Voici le calcul théorique de la taxe, avant tout plafonnement. Modifiez les valeurs.</p>
+<div class="calc">
+<div class="row">
+<div><label for="size">Taille moyenne d’un manuel (Mo)</label><input id="size" type="number" min="0" value="30"></div>
+<div><label for="dl">Téléchargements par mois</label><input id="dl" type="number" min="0" value="50000"></div>
+</div>
+<div class="result">Volume envoyé : <span id="vol">0</span> Go<br>Taxe théorique : <b id="tax">0 €</b> par mois</div>
+<small>Calcul : volume en Go × 0,055 €, avec 1 Go = 1 000 Mo. Les valeurs par défaut sont un exemple, pas nos statistiques réelles. Le plafonnement prévu par le texte pourrait changer le résultat.</small>
+</div>
+
+<h2>Ce que vous pouvez faire</h2>
+<ul>
+<li>Conserver les manuels que vous avez déjà téléchargés./li>
+<li>Partager cette page à vos proches, enseignants et collègues.</li>
+<li>Vous informer sur le texte et sur son évolution au Sénat.</li>
+</ul>
+<p>Pour la source de l’information : <a href="https://www.numerama.com/politique/2364723-lassemblee-vote-une-taxe-de-55-centimes-par-go-telecharge-qui-paiera-la-facture-a-la-fin-a-votre-avis.html" rel="noopener">article de Numerama sur le vote</a>.</p>
+
+<footer>manuels-anciens.com · Cette page présente notre situation, sans position partisane. Nous la mettrons à jour quand le texte évoluera.</footer>
+</main>
+
+<script>
+(function(){
+  var s=document.getElementById('size'),d=document.getElementById('dl'),v=document.getElementById('vol'),t=document.getElementById('tax');
+  function f(n,o){return n.toLocaleString('fr-FR',o)}
+  function u(){
+    var go=Math.max(0,+s.value||0)*Math.max(0,+d.value||0)/1000;
+    v.textContent=f(go,{maximumFractionDigits:0});
+    t.textContent=f(go*0.055,{style:'currency',currency:'EUR'});
+  }
+  s.addEventListener('input',u);d.addEventListener('input',u);u();
+})();
+</script>
+</body>
+</html>
